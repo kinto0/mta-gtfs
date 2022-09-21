@@ -86,7 +86,7 @@ describe('MTA', function () {
   });
 
   it('should get schedule info for 1 MTA subway station (string input)', function () {
-    return mta.schedule('128')
+    return mta.schedule('nqrw')
     .then(function (result) {
       result.should.have.property('schedule');
       result.should.have.property('updatedOn');
@@ -95,11 +95,11 @@ describe('MTA', function () {
   });
 
   it('should get schedule info for a station with a different feed_id', function () {
-    return mta.schedule('A15', 26)
+    return mta.schedule('Q03S', 'nqrw')
     .then(function (result) {
       result.should.have.property('schedule');
       result.should.have.property('updatedOn');
-      result.schedule['A15'].should.exist;
+      result.schedule['Q03S'].should.exist;
     });
   });
 
