@@ -1,0 +1,68 @@
+{
+  "Q03": {
+    "N": [
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664253148,
+        "departureTime": 1664253148
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664253628,
+        "departureTime": 1664253628
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664254653,
+        "departureTime": 1664254653
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664255968,
+        "departureTime": 1664255968
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664257170,
+        "departureTime": 1664257170
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664258370,
+        "departureTime": 1664258370
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664259570,
+        "departureTime": 1664259570
+      }
+    ],
+    "S": [
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664253540,
+        "departureTime": 1664253540
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664254140,
+        "departureTime": 1664254140
+      },
+      {
+        "routeId": "Q",
+        "delay": null,
+        "arrivalTime": 1664255340,
+        "departureTime": 1664255340
+      }
+    ]
+  }
+}
