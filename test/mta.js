@@ -9,15 +9,17 @@ describe('MTA', function () {
   var mta,
     serviceType,
     stopId,
-    stopIds;
+    stopIds,
+    feedId;
 
   before(function (done) {
     mta = new Mta({
       key: config.key
     });
-    stopId = 635;
-    stopIds = [635, 636, 637];
+    stopId = "Q03";
+    stopIds = ["Q03", "Q04"];
     serviceType = 'subway';
+    feedId = 'nqrw';
     done();
   });
 
@@ -76,8 +78,8 @@ describe('MTA', function () {
     done();
   });
 
-  it('should get schedule info for 1 MTA subway station (number input)', function () {
-    return mta.schedule(stopId)
+  it('should get schedule info for 1 MTA subway station', function () {
+    return mta.schedule(stopId, feedId)
     .then(function (result) {
       result.should.have.property('schedule');
       result.should.have.property('updatedOn');
@@ -85,26 +87,18 @@ describe('MTA', function () {
     });
   });
 
-  it('should get schedule info for 1 MTA subway station (string input)', function () {
-    return mta.schedule('128')
-    .then(function (result) {
-      result.should.have.property('schedule');
-      result.should.have.property('updatedOn');
-      result.schedule['128'].should.exist;
-    });
-  });
 
   it('should get schedule info for a station with a different feed_id', function () {
-    return mta.schedule('A15', 26)
+    return mta.schedule('Q03S', 'nqrw')
     .then(function (result) {
       result.should.have.property('schedule');
       result.should.have.property('updatedOn');
-      result.schedule['A15'].should.exist;
+      result.schedule['Q03S'].should.exist;
     });
   });
 
   it('should get schedule info for multiple MTA subway stations', function () {
-    return mta.schedule(stopIds)
+    return mta.schedule(stopIds, 'nqrw')
     .then(function (result) {
       result.should.have.property('schedule');
       result.should.have.property('updatedOn');
