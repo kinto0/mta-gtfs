@@ -87,6 +87,15 @@ describe('MTA', function () {
     });
   });
 
+  it('should get schedule info for 1 MTA subway station on 6', function () {
+    return mta.schedule("628S", feedId)
+      .then(function (result) {
+        result.should.have.property('schedule');
+        result.should.have.property('updatedOn');
+        result.schedule["628S"].should.exist;
+      });
+  });
+
 
   it('should get schedule info for a station with a different feed_id', function () {
     return mta.schedule('Q03S', 'nqrw')
